@@ -1,5 +1,10 @@
 let moves, totalMoves, current;
 const sonido = new Audio("8-bit-victory-sound-101319.mp3");
+const btnregresar = document.getElementById("regresar");
+
+btnregresar.addEventListener('click', () => {
+    window.location.href = 'https://angelgonzalez01.github.io/game/';
+})
 
 function iluminate(cellPos, time)   {
     setTimeout(() => {
@@ -24,6 +29,7 @@ function startGame() {
     totalMoves = 2;
     current = 0;
     document.querySelector('#start').style.display = 'none';
+    document.querySelector('#regresar').style.display = 'none';
     document.querySelector('#message').style.display = 'block';
     sequence();
 }
@@ -61,6 +67,7 @@ function cellClick(e) {
             document.querySelector('#message').innerHTML = 'Perdiste';
             setTimeout(() => {
                 document.querySelector('#start').style.display = 'block';
+                document.querySelector('#regresar').style.display = 'block';
                 document.querySelector('#message').style.display = 'none';
             }, 1000);
         }
