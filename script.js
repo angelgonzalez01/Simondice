@@ -45,7 +45,7 @@ function sequence() {
     }
 
     setTimeout(() => {
-        document.querySelector('#message').innerHTML = 'Replicate the sequence';
+        document.querySelector('#message').innerHTML = 'Replica la secuencia';
     }, 600 * moves.length);
 }
 
